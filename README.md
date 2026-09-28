@@ -55,5 +55,13 @@ No service-account credentials are required.
 - Existing v0.3 discovery records remain readable.
 
 
-## v0.5 — compass movement
-Locations store North/East/South/West as a location number, `*`, or blocked. Numbered exits offer Move here. Moving creates an empty destination placeholder but does not invent reciprocal or hidden information.
+## v0.6 — layered world model
+- Overland is the default environment.
+- Optional environments: Underground / Cave, Underwater, Sky, Dungeon, Interior / Special.
+- Region defaults to Unknown and is only recorded when the game reveals it.
+- Optional On Arrival effects.
+- Generic special connections for cave/surface/dive/fly/steer/enter/exit/return routes.
+- Contextual Return to previous/entry location is supported without inventing a fixed map edge.
+- Discovery outcomes now include Move to location and Continue with action.
+- Action movement can have an exact, unknown, or previous/entry destination.
+- Existing v0.5 compass data remains supported.
