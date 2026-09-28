@@ -53,3 +53,7 @@ No service-account credentials are required.
 - An outcome can be marked as actually obtained.
 - The same item can have multiple known sources.
 - Existing v0.3 discovery records remain readable.
+
+
+## v0.5 — compass movement
+Locations store North/East/South/West as a location number, `*`, or blocked. Numbered exits offer Move here. Moving creates an empty destination placeholder but does not invent reciprocal or hidden information.
