@@ -41,3 +41,15 @@ No service-account credentials are required.
 - Fixes first-location Save modal not closing reliably.
 - Closes successful saves before refreshing Firestore state.
 - Shows the actual Firebase error in the modal if a location write fails.
+
+
+## v0.4 — outcome-aware discoveries
+- A discovery is now an action/test with one or more possible outcomes.
+- Each outcome can be Known or Unknown.
+- Unknown outcomes record that another possibility exists without revealing its reward.
+- Known rewards support Item, Money, Resource, Information, Effect, and Other.
+- Items are indexed only when their outcome is known.
+- Item number is the primary identifier; item name is optional until revealed.
+- An outcome can be marked as actually obtained.
+- The same item can have multiple known sources.
+- Existing v0.3 discovery records remain readable.
