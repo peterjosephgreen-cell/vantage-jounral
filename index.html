@@ -1,57 +1,43 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#123f35">
-  <title>Vantage Journal</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123f35">
+<title>Vantage Journal</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div id="authScreen" class="auth-screen">
-  <div class="auth-card">
-    <div class="auth-logo">△</div>
-    <h1>VANTAGE JOURNAL</h1>
-    <p>Shared Expedition</p>
-    <form id="loginForm">
-      <label>Email<input id="loginEmail" type="email" autocomplete="username" required></label>
-      <label>Password<input id="loginPassword" type="password" autocomplete="current-password" required></label>
-      <button class="primary wide" type="submit">Sign in</button>
-      <div id="loginError" class="error"></div>
-    </form>
-  </div>
+ <div class="auth-card"><div class="auth-logo">△</div><h1>VANTAGE JOURNAL</h1><p>Shared Expedition</p>
+  <form id="loginForm">
+   <label>Email<input id="loginEmail" type="email" autocomplete="username" required></label>
+   <label>Password<input id="loginPassword" type="password" autocomplete="current-password" required></label>
+   <button class="primary wide">Sign in</button><div id="loginError" class="error"></div>
+  </form>
+ </div>
 </div>
-<div class="app">
-  <aside class="sidebar">
-    <div class="brand"><div class="mountain">△</div><strong>VANTAGE</strong><span>JOURNAL</span></div>
-    <nav id="desktopNav"></nav>
-    <div class="profile"><div class="avatar" id="profileInitial">P</div><div><strong id="profileName">Pete</strong><small id="profileRole">Owner</small></div><button id="signOutBtn" class="signout" title="Sign out">↪</button></div>
-  </aside>
 
-  <main>
-    <header>
-      <div><h1 id="pageTitle">Explore</h1><p id="pageSubtitle">Record discoveries as you play</p></div>
-      <div class="header-right"><span>👥 Vantage Expedition · 3 members</span><span class="synced">● Synced</span></div>
-    </header>
-    <section id="content"></section>
-  </main>
+<div class="app">
+ <aside class="sidebar">
+  <div class="brand"><div class="mountain">△</div><strong>VANTAGE</strong><span>JOURNAL</span></div>
+  <nav id="desktopNav"></nav>
+  <div class="profile"><div class="avatar" id="profileInitial">P</div><div><strong id="profileName">Pete</strong><small id="profileRole">Owner</small></div><button id="signOutBtn" class="signout">↪</button></div>
+ </aside>
+ <main>
+  <header><div><h1 id="pageTitle">Explore</h1><p id="pageSubtitle"></p></div>
+   <div class="header-right"><span id="memberCount">👥 Vantage Expedition</span><span class="synced">● Synced</span></div>
+  </header>
+  <section id="content"></section>
+ </main>
 </div>
 <nav class="mobile-nav" id="mobileNav"></nav>
 
 <div class="modal-backdrop hidden" id="modalBackdrop">
-  <div class="modal">
-    <button class="close" id="closeModal">×</button>
-    <h2>Add discovery</h2>
-    <label>Location<input id="discLocation" type="number"></label>
-    <label>Action category<select id="discAction"><option>Look</option><option>Help</option><option>Engage</option><option>Take</option><option>Overpower</option><option>Move</option></select></label>
-    <label>Specific action<input id="discSpecific" placeholder="e.g. Study"></label>
-    <label>What happened?<select id="discType"><option>Item obtained</option><option>Item available / seen</option><option>Requirement discovered</option><option>Information / clue</option><option>Location changed</option><option>Nothing useful</option><option>Other</option></select></label>
-    <label>Item / requirement / title<input id="discTitle" placeholder="e.g. Ancient Lens"></label>
-    <label>Notes<textarea id="discNotes" rows="3" placeholder="What did you learn?"></textarea></label>
-    <div class="modal-actions"><button class="secondary" id="cancelModal">Cancel</button><button class="primary" id="saveDiscovery">Save</button></div>
-  </div>
+ <div class="modal">
+  <button class="close" id="closeModal">×</button>
+  <div id="modalContent"></div>
+ </div>
 </div>
 
 <script type="module" src="app.js"></script>
-</body>
-</html>
+</body></html>

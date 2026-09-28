@@ -1,32 +1,37 @@
-# Vantage Journal — Firebase version
+# Vantage Journal v0.3
 
-This build is connected to the Firebase project `vantage-journal`.
+Firebase-backed shared persistent journal for Pete (Owner) and Min (Member).
 
-## First run
-1. Host these files over HTTPS (GitHub Pages is fine). Do not just double-click index.html.
-2. Sign in with the Firebase Authentication account already created for Pete.
-3. On Pete's first successful login, the app bootstraps:
-   - `expeditions/main`
-   - Pete's owner membership document
-4. Set the first location from the Explore screen.
-5. Add discoveries. Data is stored in Firestore, not localStorage.
-
-## Current scope
-- Email/password login
-- Pete owner bootstrap
-- Firestore-backed locations and discoveries
+## What's new
+- Dynamic member count (no hard-coded 3 members)
+- Proper Add/Edit Location form
+- Separate "What's at this location?" and general notes
+- Add Discovery workflow
+- Record item effect text after discovery
 - Discovered-items-only index
-- Multiple known sources per item
-- Activity records
-- Responsive desktop/mobile UI
-- No undiscovered item catalogue
+- Multiple known sources for the same item
+- Item detail screen showing all known sources
+- Members screen
+- Owner workflow to add Min by Firebase UID
+- Searchable journal/items
+- Return-to-location flag
+- Responsive mobile/desktop UI
 
-## Next build
-- Owner member-management screen for Min and Alice
-- Better location editing and map connections
-- Real-time listeners so all three screens update instantly
-- Item card number/reference metadata after discovery
-- journeys
-- edit/delete UI with owner protections
+## Upgrade
+Replace the four files in the existing GitHub Pages repository with:
+- index.html
+- app.js
+- styles.css
+- README.md
 
-Important: the Firebase web config is intentionally client-side. Never put service-account keys or passwords in this project.
+Existing Firebase expedition/member data is retained.
+
+## Adding Min
+1. Firebase Console -> Authentication -> Users -> Add user.
+2. Create Min's email/password account.
+3. Copy Min's User UID.
+4. Sign into Vantage Journal as Pete.
+5. Members -> Add Min -> paste the UID.
+6. Min can then sign in using her own email/password.
+
+No service-account credentials are required.
