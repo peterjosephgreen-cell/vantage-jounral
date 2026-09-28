@@ -35,3 +35,9 @@ Existing Firebase expedition/member data is retained.
 6. Min can then sign in using her own email/password.
 
 No service-account credentials are required.
+
+
+## v0.3.1 hotfix
+- Fixes first-location Save modal not closing reliably.
+- Closes successful saves before refreshing Firestore state.
+- Shows the actual Firebase error in the modal if a location write fails.
